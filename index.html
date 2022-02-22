@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light & Dark Mode Using Range Slider</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="brightness-box">
+      <i class='bx bxs-moon'></i>
+      <input type="range" id="range" min="10" max="100" value="100">
+      <i class='bx bxs-sun'></i>
+    </div>
+  </div>
+
+  <script>
+    rangeInput = document.getElementById('range');
+    container = document.getElementsByClassName('container')[0];
+
+    rangeInput.addEventListener("change",function(){
+      container.style.filter = "brightness(" + rangeInput.value + "%)";
+    });
+  </script>
+
+</body>
+</html>
